@@ -1,0 +1,22 @@
+{
+  "name": "test123123",
+  "version": "1.0.0",
+  "description": "持续集成测试",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linkMHran/travisCI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linkMHran/travisCI/issues"
+  },
+  "homepage": "https://github.com/linkMHran/travisCI#readme",
+  "dependencies": {
+    "superagent": "^3.8.2"
+  }
+}
