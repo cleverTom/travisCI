@@ -6,6 +6,5 @@ request.get('http://www.baidu.com').end(function (err, res) {
     }
     console.log(res.statusCode);
     console.log(res.headers);
-    console.log('构建完成');
 });
 
