@@ -4,7 +4,7 @@ const app = express();
 app.get('/',function(req,res) {
     console.log('someone access here!');
     res.append('Content-Type','text/html');
-    res.send('<p>Welcome to my website!</p>>');
+    res.send('<p>Welcome to my website!</p>');
 });
 
 app.listen(8080,function (err) {
