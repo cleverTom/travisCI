@@ -12,6 +12,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "HOST 123.57.157.213\nport 58628\nStrictHostKeyChecking no\n" >> ~/.ssh/config
 install:
+- npm install -g pm2
 - npm install
 script:
 - npm run test
