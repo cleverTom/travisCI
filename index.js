@@ -1,11 +1,14 @@
-const request = require('superagent');
+const express = require('express');
+const app = express();
 
-request.get('http://www.baidu.com').end(function (err, res) {
-    if (err) {
-        return console.error(err);
-    }
-    console.log(res.statusCode);
-    console.log(res.headers);
+app.get('/',function(req,res) {
+    console.log('someone access here!');
+    res.send('welcome to my website');
 });
 
-console.log('will building');
+app.listen(8080,function (err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log('启动服务,监听端口: 8080');
+});
