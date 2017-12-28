@@ -8,3 +8,4 @@ request.get('http://www.baidu.com').end(function (err, res) {
     console.log(res.headers);
 });
 
+console.log('will building');
