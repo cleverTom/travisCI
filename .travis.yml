@@ -3,11 +3,10 @@ sudo: required
 node_js:
 - '8'
 before_install:
-- cd ~ && ls -lsFa && cd .ssh && ls -lsFa
 - openssl aes-256-cbc -K $encrypted_aa2043a425e0_key -iv $encrypted_aa2043a425e0_iv
   -in id_rsa.enc -out ~\/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
-- echo -e "HOST 123.57.157.213\nport 58628\nStrictHostKeyChecking no\n" >> ./ssh/config
+- echo -e "HOST 123.57.157.213\nport 58628\nStrictHostKeyChecking no\n" >> ~/.ssh/config
 install:
 - npm install
 script:
@@ -16,4 +15,3 @@ env:
 - DB=mongodb
 after_success:
 - ssh root@123.57.157.213 'cd /data/travisCI/ && git pull && node index.js'
-
