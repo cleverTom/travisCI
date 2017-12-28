@@ -13,6 +13,6 @@ script:
 - npm run test
 env:
 - DB=mongodb
-after_success
+after_success:
 - ssh root@123.57.157.213 'cd /data/travisCI/ && git pull && node index.js'
 
